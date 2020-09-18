@@ -1,13 +1,10 @@
 title = [
-    'Advaced java',
-    'C++',
-    'JQuery'
+    'Sample'
     ];
 description = [
-    'it consist solution of manual',
-    'Basic c++',
-    'Start learning Jquerty'
+    'It is just used for testing propuse.This subject is only for developers of this site'
     ];
+
 
 hold = document.getElementById('me-main').innerHTML
 for(var i=0; i < title.length; i+=2)
