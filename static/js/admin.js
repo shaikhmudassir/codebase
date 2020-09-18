@@ -8,6 +8,9 @@ function submitted()
       code = document.getElementById("code").value;
       image = document.getElementById("image").value;
       strOut = document.getElementById("strOut").value;
+
+      document.getElementById("outputlink").value = "<a href='"+id+"'><h6>"+ title +"</h6></a>"
+
       document.getElementById("output").innerHTML = 
         "<div id='"+ id +"'>\n"+
         "<h4>"+ title +"</h4>\n"+
@@ -45,4 +48,16 @@ function submitted()
       /* Copy the text inside the text field */
       document.execCommand("copy");
       document.getElementById("cp-btn").innerText = "Copied";
+    }
+    function copylink() {
+      /* Get the text field */
+      var copyText = document.getElementById("outputlink");
+
+      /* Select the text field */
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+      /* Copy the text inside the text field */
+      document.execCommand("copy");
+      document.getElementById("cp-btn").innerText = "link Copied";
     }
