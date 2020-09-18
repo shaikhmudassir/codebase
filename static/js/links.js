@@ -1,8 +1,5 @@
 var links = [
-  "<a href='index.html'><button class='btn btn-light'>Home</button></a>",
-  "<a href='index.html'><button class='btn btn-light'>C++</button></a>",
-  "<a href='index.html'><button class='btn btn-light'>JavaScript</button></a>",
-  "<a href='index.html'><button class='btn btn-light'>JavaScript</button></a>"
+  "<a href='1.html'><button class='btn btn-light'>Test 1</button></a>"
 ];
 
 hold = document.getElementById("links").innerHTML;
