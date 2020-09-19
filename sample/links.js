@@ -4,7 +4,7 @@ var links = [
   "Task 2"
 ];
 
-document.getElementsByTagName("title").innerText = "CodeBase - "+ title
+document.getElementById("title").innerText = "CodeBase - "+ title
 
 hold = document.getElementById("links").innerHTML;
 holdres = document.getElementById("links-res").innerHTML;
