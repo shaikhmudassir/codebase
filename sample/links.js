@@ -1,5 +1,6 @@
 var links = [
-  "<a href='1.html'><button class='btn btn-light'>Test 1</button></a>"
+  "Task 1",
+  "Task 2"
 ];
 
 hold = document.getElementById("links").innerHTML;
