@@ -7,7 +7,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://drive.google.com/uc?export=view&id=1y2B5Wps5RmZRtGif1eSSdynMo-7HF189" >
+    <link rel="stylesheet" href="https://drive.google.com/uc?export=view&id=1GePS2R0UyWLbzvodpb06FgeV3SYoEebk" >
+    <link rel="stylesheet" href="style.css" >
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.0/build/styles/monokai.min.css">
 
     <title>Hello, world!</title>
@@ -20,7 +22,7 @@
     </button>
 	  <h1>CodeBase</h1>
   </nav>
-  <div class="collapse bg-secondary" id="navbarToggleExternalContent" style="padding: 5%;">
+  <div class="collapse bg-secondary" id="navbarToggleExternalContent">
     <div id="links-res"></div>
   </div>
 </div>
@@ -32,11 +34,13 @@
 
   <div class="main col-lg-10 col-md-9">
     <h1>Advanced Java</h1>
-      <a href="#1"><h6>Write a program to demonstrate use uf checkbox and button?</h6></a>
-      <a href="#2"><h6>Write a program to demonstrate use uf RadioButton and button?</h6></a>
-      <a href="#3"><h6>Write a program to demonstrate use uf Label and button?</h6></a>
+    <ul>
+      <li><a href="#1"><h6>Write a program to demonstrate use uf checkbox and button?</h6></a></li>
+      <li><a href="#2"><h6>Write a program to demonstrate use uf RadioButton and button?</h6></a></li>
+      <li><a href="#3"><h6>Write a program to demonstrate use uf Label and button?</h6></a></li>
+      <li><a href='#1'><h6>practice</h6></a></li>
+    </ul><hr>
       
-
 <div id="1">
 <h4>Write a program to demonstrate use uf checkbox and button</h4>
 <p></p>
@@ -136,10 +140,33 @@
 }
 </code></pre><h6>Output</h6>
       </div>
-    </div>
+
+    <div id='1'>
+      <h4>practice</h4>
+      <p>this subject consist all my personal practice program made in pyrhon </p>
+      <pre>
+      <code class='python'>
+      from sys import argv, exit
+      
+      if len(argv) < 2:
+          exit(0)
+      
+      words = ""
+      
+      for s in argv:
+          if s != argv[0]:
+              words = words +" "+s.capitalize()
+      print(words)
+      
+      </code>
+      </pre>
+      <h6>Output</h6>
+      <p>type in command line or terminal $ fcap STRING<p>
+      </div>
+      
 
     <!-- Optional JavaScript -->
-
+    </div>
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.0/build/highlight.min.js"></script>  </head>
     <script>hljs.initHighlightingOnLoad();</script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
