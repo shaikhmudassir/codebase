@@ -1,0 +1,244 @@
+{
+  "1":
+  {
+  "Id": [
+    1, 
+    2, 
+    3, 
+    4, 
+    5
+  ], 
+  "code": [
+    "import java.applet.*;\r\nimport java.awt.*;\r\n\r\n// &ltapplet code=\"p1\" width=\"200\" height=\"300\"&gt&lt/applet&gt\r\npublic class p1 extends Applet\r\n{\r\n    public void init()\r\n    {\r\n        Checkbox c1 = new Checkbox(\"Java\");\r\n        Checkbox c2 = new Checkbox(\"C++\");\r\n        Checkbox c3 = new Checkbox(\"python\");\r\n        CheckboxGroup cbg = new CheckboxGroup();\r\n        Checkbox cb1 = new Checkbox(\"First Year\",cbg,true);\r\n        Checkbox cb2 = new Checkbox(\"Second  Year\",cbg,false);\r\n        Checkbox cb3 = new Checkbox(\"Thrid  Year\",cbg,false);\r\n        add(c1);\r\n        add(c2);\r\n        add(c3);\r\n        add(cb1);\r\n        add(cb2);\r\n        add(cb3);\r\n    }\r\n}\r\n", 
+    "import java.applet.*;\r\nimport java.awt.*;\r\n\r\n// &ltapplet code=\"p1\" width=\"200\" height=\"300\"&gt&lt/applet&gt\r\npublic class p1 extends Applet\r\n{\r\n    public void init()\r\n    {\r\n        Label l1 = new Label(\"Username\");\r\n        Label l2 = new Label(\"Password\");\r\n        Label l3 = new Label(\"FeedBack\");\r\n        TextField t1 = new TextField(10);\r\n        TextField t2 = new TextField(10);\r\n        TextArea a = new TextArea(5,12);\r\n        Button btn = new Button(\"Submit\"); \r\n\r\n        add(l1);\r\n        add(t1);\r\n        add(l2);\r\n        add(t2);\r\n        add(l3);\r\n        add(a);\r\n        add(btn);\r\n    }\r\n}", 
+    "import java.applet.*;\r\nimport java.awt.*;\r\n\r\n// &ltapplet code=\"p1\" width=\"200\" height=\"300\"&gt&lt/applet&gt\r\npublic class p1 extends Applet\r\n{\r\n    public void init()\r\n    {\r\n         Label l1 = new Label(\"Welcome to Java\");\r\n        add(l1);\r\n    }\r\n}", 
+    "import java.applet.*;\r\nimport java.awt.*;\r\n\r\n// &ltapplet code=\"p1\" width=\"200\" height=\"300\"&gt&lt/applet&gt\r\npublic class p1 extends Applet\r\n{\r\n    public void init()\r\n    {\r\n        Checkbox cb1 = new Checkbox(\"English\"); \r\n        Checkbox cb2 = new Checkbox(\"Marathi\"); \r\n        Checkbox cb3 = new Checkbox(\"Hindi\"); \r\n        Checkbox cb4 = new Checkbox(\"Urdu\");\r\n\r\n        add(cb1);\r\n        add(cb2);\r\n        add(cb3);\r\n        add(cb4);\r\n\r\n    }\r\n}", 
+    "import java.applet.*;\r\nimport java.awt.*;\r\n\r\n// &ltapplet code=\"p1\" width=\"200\" height=\"300\"&gt&lt/applet&gt\r\npublic class p1 extends Applet\r\n{\r\n    public void init()\r\n    {\r\n        Button btn1 = new Button(\"OK\");  \r\n        Button btn2 = new Button(\"RESET\");  \r\n        Button btn3 = new Button(\"CANCEL\");\r\n\r\n        add(btn1);   \r\n        add(btn2);   \r\n        add(btn3);\r\n\r\n    }\r\n}"
+  ], 
+  "descOut": [
+    "", 
+    "", 
+    "", 
+    "", 
+    ""
+  ], 
+  "description": [
+    "", 
+    "", 
+    "", 
+    "", 
+    ""
+  ], 
+  "image": [
+    0, 
+    0, 
+    0, 
+    0, 
+    0
+  ], 
+  "title": [
+    "Design an applet/application to demonstrate the use of Radio Button and Checkbox.", 
+    "Design an applet/application to create form using Text Field, Text Area, Button and Label.", 
+    "Develop a program using Label to display message \u201cWelcome to Java\u201d.", 
+    "Develop a program to select multiple languages known to user. (e. g Marathi, Hindi, English, Sanskrit).", 
+    "Write a program to create three Buttons with Caption OK, RESET and CANCEL."
+  ], 
+  "topicId": [
+    1, 
+    1, 
+    1, 
+    1, 
+    1
+  ]
+},
+"2":
+{
+  "Id": [
+    6, 
+    7, 
+    8
+  ], 
+  "code": [
+    "import java.awt.*;\r\nimport java.applet.*;\r\n\r\n// &ltapplet code=\"p2\" width=\"200\" height=\"300\"&gt&lt/applet&gt\r\n\r\npublic class p2 extends Applet\r\n{\r\n    public void init()\r\n    {\r\n        List l1 = new List(4);\r\n\r\n        l1.addItem(\"Summer\");\r\n        l1.addItem(\"Winter\");\r\n        l1.addItem(\"Rainy\");\r\n        add(l1);\r\n    }\r\n}", 
+    "import java.awt.*;\r\nimport java.applet.*;\r\n\r\n// &ltapplet code=\"p2\" width=\"200\" height=\"300\"&gt&lt/applet&gt\r\n\r\npublic class p2 extends Applet\r\n{\r\n    public void init()\r\n    {\r\n        String[] cities = {\"Aurangabad\",\r\n            \"Mumbai\",\r\n            \"Pune\",\r\n            \"Nagpur\",\r\n            \"Kolkata\",\r\n            \"Nasik\",\r\n            \"Chennai\",\r\n            \"Kanpur\",\r\n            \"Hyderabad\",\r\n            \"Ahmednagar\"\r\n        };\r\n        \r\n        List l1 = new List(8);\r\n        for(int i=0; i &lt cities.length; i++)\r\n        {\r\n            l1.addItem(cities[i]);\r\n        }\r\n        add(l1);\r\n    }\r\n}", 
+    "import java.awt.*;\r\nimport java.applet.*;\r\n\r\n// &ltapplet code=\"p2\" width=\"200\" height=\"300\"&gt&lt/applet&gt\r\n\r\npublic class p2 extends Applet\r\n{\r\n    public void init()\r\n    {\r\n        String[] newspaper = {\r\n            \"Times of India\",\r\n            \"New York Times\",\r\n            \"Lokmat Times\",\r\n            \"Aurangabad Times\"\r\n        };\r\n        List l1 = new List(4,true);\r\n        for(int i=0; i &lt newspaper.length; i++)\r\n        {\r\n            l1.addItem(newspaper[i]);\r\n        }\r\n        add(l1);\r\n    }\r\n}"
+  ], 
+  "descOut": [
+    "Following image is given in Question.", 
+    "", 
+    ""
+  ], 
+  "description": [
+    "", 
+    "", 
+    ""
+  ], 
+  "image": [
+    0, 
+    0, 
+    0
+  ], 
+  "title": [
+    "Write Java Program to show following output.", 
+    "Develop an applet/ application using List components to add names of 10 different cities.", 
+    "Develop applet / application to select multiple names of news papers"
+  ], 
+  "topicId": [
+    2, 
+    2, 
+    2
+  ]
+},
+"3":
+{
+  "Id": [
+    9, 
+    10, 
+    11, 
+    12
+  ], 
+  "code": [
+    "import java.awt.*;\r\nimport java.applet.*;\r\n\r\n//&ltapplet code=\"p3\" width=\"300\" height=\"400\"&gt&lt/applet&gt\r\n\r\npublic class p3 extends Applet\r\n{\r\n    public void init()\r\n    {\r\n        for(int i=0; i &lt 25; i++)\r\n        {\r\n            add(new Button(String.valueOf(i+1)));\r\n        }\r\n        setLayout(new GridLayout(5,5));\r\n    }\r\n}", 
+    "import java.awt.*;\r\nimport java.applet.*;\r\n\r\n//&ltapplet code=\"p3\" width=\"300\" height=\"400\"&gt&lt/applet&gt\r\n\r\npublic class p3 extends Applet\r\n{\r\n    public void init()\r\n    {\r\n        for(int i=0; i &lt 10; i++)\r\n        {\r\n            add(new Button(String.valueOf(i)));\r\n        }\r\n        setLayout(new GridLayout(4,3));\r\n    }\r\n}", 
+    "import java.awt.*;\r\nimport java.applet.*;\r\n\r\npublic class p3 extends Frame\r\n{\r\n    p3()\r\n    {\r\n        for(int i=0; i &lt 5; i++)\r\n        {\r\n            add(new Button(\"Button \" + String.valueOf(i+1)));\r\n        }\r\n        setLayout(new GridLayout(3,2,10,10));\r\n        setTitle(\"GridLayout Demo\");\r\n        setSize(400,200);\r\n        setVisible(true);\r\n    }\r\n\r\n    public static void main(String args[])\r\n    {\r\n        new p3(); \r\n    }\r\n}", 
+    "import java.awt.*;\r\nimport java.applet.*;\r\n\r\n//&ltapplet code=\"p3\" width=\"300\" height=\"150\"&gt&lt/applet&gt\r\n\r\npublic class p3 extends Applet\r\n{\r\n    public void init()\r\n    {\r\n        Button b1 = new Button(\"North\");\r\n        Button b2 = new Button(\"East\");\r\n        Button b3 = new Button(\"South\");\r\n        Button b4 = new Button(\"West\");\r\n        Button b5 = new Button(\"Center\");\r\n\r\n        setLayout(new BorderLayout());\r\n\r\n        add(b1,BorderLayout.NORTH);\r\n        add(b2,BorderLayout.EAST);\r\n        add(b3,BorderLayout.SOUTH);\r\n        add(b4,BorderLayout.WEST);\r\n        add(b5,BorderLayout.CENTER);\r\n\r\n    }\r\n}"
+  ], 
+  "descOut": [
+    "", 
+    "", 
+    "", 
+    ""
+  ], 
+  "description": [
+    "", 
+    "", 
+    "", 
+    ""
+  ], 
+  "image": [
+    0, 
+    0, 
+    0, 
+    0
+  ], 
+  "title": [
+    "Write java Program to Demonstrate Grid of 5* 5.", 
+    "Write a program to display The Number on Button from 0 to 9.", 
+    "Write a program to generate following output.", 
+    "Write a program to generate following output using Border Layout."
+  ], 
+  "topicId": [
+    3, 
+    3, 
+    3, 
+    3
+  ]
+},
+"4":
+{
+  "Id": [
+    13, 
+    14, 
+    15
+  ], 
+  "code": [
+    "\nimport java.awt.*;\nimport java.awt.event.*;\nimport javax.swing.*;\npublic class CardLayoutExample extends JFrame implements ActionListener\n{\n    CardLayout card;\n    JButton b1, b2, b3;\n    Container c;\n    CardLayoutExample()\n    {\n        c=getContentPane();\n        card=new CardLayout(40,30);\n        //create CardLayout object with 40 hor space and 30 ver space\n        c.setLayout(card);\n        b1=new JButton(\"Apple\");\n        b2=new JButton(\"Boy\");\n        b3=new JButton(\"Cat\");\n        b1.addActionListener(this);\n        b2.addActionListener(this);\n        b3.addActionListener(this);\n        c.add(\"a\",b1);c.add(\"b\",b2);c.add(\"c\",b3);\n    }\n    public void actionPerformed(ActionEvent e)\n    {\n        card.next(c);\n    }\n    public static void main(String[] args)\n    {\n        CardLayoutExample cl=new CardLayoutExample();\n        cl.setSize(400,400);\n        cl.setVisible(true);\n        cl.setDefaultCloseOperation(EXIT_ON_CLOSE);\n    }\n}\n", 
+    "import java.awt.*;\r\n  \r\npublic class p4 extends Frame{  \r\n\r\n    p4()\r\n    {  \r\n        GridBagLayout layout = new GridBagLayout();  \r\n        GridBagConstraints cell = new GridBagConstraints();\r\n\r\n        Button b1 = new Button(\"Button One\");\r\n        Button b2 = new Button(\"Button Two\");\r\n        Button b3 = new Button(\"Button Three\");\r\n        Button b4 = new Button(\"Button Four\");\r\n        Button b5 = new Button(\"Button Five\");\r\n\r\n\r\n        setLayout(new GridBagLayout());  \r\n\r\n        cell.fill = GridBagConstraints.HORIZONTAL;\r\n\r\n        cell.gridx = 0;  \r\n        cell.gridy = 0;  \r\n        add(b1, cell);  \r\n\r\n        cell.gridx = 1;  \r\n        cell.gridy = 0;  \r\n        add(b2, cell);  \r\n\r\n        cell.ipady = 20;  \r\n        cell.gridx = 0;  \r\n        cell.gridy = 1;  \r\n        add(b3, cell);  \r\n\r\n        cell.gridx = 1;  \r\n        cell.gridy = 1;  \r\n        add(b4, cell);\r\n\r\n        cell.gridx = 0;  \r\n        cell.gridy = 2;  \r\n        cell.gridwidth = 2;  \r\n        add(b5, cell);  \r\n\r\n        setTitle(\"GridBag Layout Example\");\r\n        setSize(300, 300);  \r\n        setVisible(true);  \r\n    } \r\n    public static void main(String[] args)\r\n    {  \r\n        new p4();  \r\n    }   \r\n}  ", 
+    "import java.awt.*;\r\n\r\npublic class p4 extends Frame\r\n{\r\n    p4()\r\n    {\r\n        GridBagConstraints cell = new GridBagConstraints();\r\n        Label l1 = new Label(\"Name\");\r\n        Label l2 = new Label(\"Comments\");\r\n        TextField t1 = new TextField(10);\r\n        TextArea t2 = new TextArea(8,15);\r\n        Button sub = new Button(\"Submit\");\r\n\r\n        setLayout(new GridBagLayout());\r\n\r\n        cell.fill = GridBagConstraints.VERTICAL;\r\n\r\n        cell.gridx = 0;\r\n        cell.gridy = 0;\r\n        add(l1,cell);\r\n\r\n        cell.gridx = 1;\r\n        cell.gridy = 0;\r\n        add(t1,cell);\r\n\r\n        cell.gridx = 0;\r\n        cell.gridy = 1;\r\n        add(l2,cell);\r\n\r\n        cell.gridx = 1;\r\n        cell.gridy = 1;\r\n        add(t2,cell);\r\n        \r\n        cell.gridx = 1;\r\n        cell.gridy = 2;\r\n        add(sub,cell);\r\n\r\n        setTitle(\"GridBagLayout in Java Example\");\r\n        setSize(300,400);\r\n        setVisible(true);\r\n    }\r\n\r\n    public static void main(String args[])\r\n    {\r\n        new p4();\r\n    }\r\n}"
+  ], 
+  "descOut": [
+    "", 
+    "Following image is given in Question.", 
+    "Following image is given in Question."
+  ], 
+  "description": [
+    "", 
+    "<style>\r\n    table,td,th{border:1px solid green; border-collapse:collapse; text-align: center; padding:10px;}\r\n</style>\r\n    <h4>Note : </h4>\r\n    <p>Layout must be set before adding component into the Frame while using GridBagLayout, Otherwise it \r\n    returns following exception<br>\r\n    <b>Exception in thread \"main\" java.lang.IllegalArgumentException:\r\n    cannot add to layout: constraint must be a string (or null)</b></p>\r\n    \r\n    <table style=\"margin-top: 10px;\">\r\n    <thead>\r\n        <th>Member</th>\r\n        <th>Description</th>\r\n    </thead>\r\n    <tr>\r\n        <td>gridx</td>\r\n        <td>Represent Row</td>\r\n    </tr>\r\n    <tr>\r\n        <td>gridy</td>\r\n        <td>Represent Column</td>\r\n    </tr>\r\n    <tr>\r\n        <td>ipadx</td>\r\n        <td>Internal left-right Padding</td>\r\n    </tr>\r\n    <tr>\r\n        <td>ipady</td>\r\n        <td>Internal top-bottom Padding</td>\r\n    </tr>\r\n    <tr>\r\n        <td>GridBagConstraints.HORIZONTAL</td>\r\n        <td>Make component wide enough to fill Horizontal display Area</td>\r\n    </tr>\r\n    <tr>\r\n        <td>GridBagConstraints.VERTICAL</td>\r\n        <td>Make component tall enough to fill Vertical display Area</td>\r\n    </tr>\r\n    </table>", 
+    ""
+  ], 
+  "image": [
+    0, 
+    0, 
+    0
+  ], 
+  "title": [
+    "Execute the following Program and write the output.", 
+    "1. Write Java program to display following output.", 
+    "2. Write Java program to display following output."
+  ], 
+  "topicId": [
+    4, 
+    4, 
+    4
+  ]
+},
+"5":
+{
+  "Id": [
+    16, 
+    17
+  ], 
+  "code": [
+    "\r\nimport javax.swing.*;\r\nimport java.awt.*;\r\n\r\npublic class p5 extends JFrame \r\n{   \r\n    JMenuBar mb; \r\n    JMenu m1, m2, m3, m4, subm1, subm2;\r\n    \r\n    p5()\r\n    {\r\n        mb = new JMenuBar();\r\n        m1 = new JMenu(\"File\");\r\n        m2 = new JMenu(\"Edit\");\r\n        m3 = new JMenu(\"view\");\r\n        m4 = new JMenu(\"Create\");\r\n        subm1 = new JMenu(\"New\");\r\n        subm2 = new JMenu(\"Open\");\r\n\r\n        m1.setForeground(Color.RED);\r\n        subm1.setForeground(Color.ORANGE);\r\n        subm2.setForeground(Color.PINK);\r\n        m2.setForeground(Color.GREEN);\r\n        m3.setForeground(Color.BLUE);\r\n        m4.setForeground(Color.BLACK);\r\n        m4.setEnabled(false);\r\n\r\n        m1.add(subm1);\r\n        m1.add(subm2);\r\n        mb.add(m1);\r\n        mb.add(m2);\r\n        mb.add(m3);\r\n        mb.add(m4);\r\n\r\n        setJMenuBar(mb);\r\n        setSize(300,400);\r\n        setVisible(true);\r\n    }\r\n\r\n    public static void main(String args[])\r\n    {\r\n        new p5();\r\n    }\r\n}\r\n", 
+    "\r\nimport java.awt.*;\r\nimport java.awt.event.*;\r\npublic class MenuDemo1 extends Frame\r\n{\r\n    MenuBar mb;\r\n    MenuItem m1,m2,m3,m4;\r\n    Menu mn;\r\n    MenuShortcut ms;\r\n    MenuDemo1()\r\n    {\r\n        setTitle(\"MenuBar Demo\");\r\n        setSize(500,500);\r\n        setLayout(null);\r\n        ms=new MenuShortcut(KeyEvent.VK_X);\r\n        mn=new Menu(\"File\");\r\n        mb=new MenuBar();\r\n        m1=new MenuItem(\"New...\");\r\n        m2=new MenuItem(\"Open...\");\r\n        m3=new MenuItem(\"Save As...\");\r\n        m4=new MenuItem(\"Exit\",ms);\r\n    \r\n        mn.add(m1);\r\n        mn.add(m2);\r\n        mn.add(m3);\r\n        mn.addSeparator();\r\n        mn.add(m4);\r\n        mb.add(mn);\r\n\r\n        // Menu Bar is not set in Frame\r\n        setMenuBar(mb);\r\n\r\n    }\r\n    public static void main(String[] args)\r\n    {\r\n        MenuDemo1 md=new MenuDemo1();\r\n        md.setVisible(true);\r\n    }\r\n}\r\n"
+  ], 
+  "descOut": [
+    "Following image is given in Question.", 
+    "<b>Error :</b> Menu Bar is not set in Frame."
+  ], 
+  "description": [
+    "", 
+    ""
+  ], 
+  "image": [
+    0, 
+    0
+  ], 
+  "title": [
+    "\r\nWrite a program which creates Menu of different colors and disable menu item for\r\nBlack color. \r\n", 
+    "\r\nFind errors in following program and display output as shown below. \r\n"
+  ], 
+  "topicId": [
+    5, 
+    5
+  ]
+},
+"6":
+{
+  "Id": [
+    18, 
+    19, 
+    20
+  ], 
+  "code": [
+    "\r\nimport javax.swing.*;\r\nimport java.awt.*;\r\nimport java.awt.event.*;\r\nimport java.applet.*;\r\n\r\n//&ltapplet code=\"p6\" width=\"300\" height=\"400\"&gt&lt/applet&gt\r\n\r\npublic class p6 extends JApplet implements ActionListener\r\n{\r\n    JComboBox cb;\r\n    JLabel l1;\r\n\r\n    public void init()\r\n    {\r\n        cb = new JComboBox();\r\n        l1 = new JLabel();\r\n        cb.addItem(\"Solapur\");\r\n        cb.addItem(\"Pune\");\r\n        cb.addItem(\"Banglore\");\r\n        cb.addItem(\"Mumbai\");\r\n        cb.addActionListener(this);\r\n\r\n        add(cb);\r\n        add(l1);\r\n        setLayout(new FlowLayout());\r\n    }\r\n\r\n    public void actionPerformed(ActionEvent e)\r\n    {\r\n        repaint();\r\n    }\r\n\r\n    public void paint(Graphics g)\r\n    {\r\n        l1.setText(\"You are in \" + cb.getSelectedItem());\r\n    }\r\n}\r\n", 
+    "import javax.swing.*;\r\nimport java.awt.*;\r\nimport java.awt.event.*;\r\n\r\npublic class p6 extends JFrame implements ActionListener\r\n{\r\n    JComboBox cb;\r\n    JLabel l1;\r\n\r\n    p6()\r\n    {\r\n        cb = new JComboBox();\r\n        l1 = new JLabel(\"You are in .\");\r\n        cb.addItem(\"Maharashtra\");\r\n        cb.addItem(\"Delhi\");\r\n        cb.addItem(\"Punjab\");\r\n        cb.addItem(\"Rajasthan\");\r\n        cb.addActionListener(this);\r\n\r\n        add(cb);\r\n        add(l1);\r\n        setTitle(\"JComboBox using Frame\");\r\n        setLayout(new FlowLayout());\r\n        setSize(300,400);\r\n        setVisible(true);\r\n    }\r\n\r\n    public void actionPerformed(ActionEvent e)\r\n    {\r\n        l1.setText(\"You are in \" + cb.getSelectedItem());\r\n    }\r\n\r\n    public static void main(String[] args)\r\n    {\r\n        new p6();\r\n    }\r\n}\r\n", 
+    "import java.awt.*;\r\nimport javax.swing.*;\r\n\r\npublic class p6 extends JFrame\r\n{\r\n    JPanel panel = new JPanel();\r\n    JScrollPane scrl = new JScrollPane(panel);\r\n\r\n    p6()\r\n    {\r\n        // Adding 50 Buttons to increase size of Frame \r\n        for(int i = 0; i &lt 50; i++)\r\n        {\r\n            panel.add(new Button(\"Button \" + i));\r\n        }\r\n\r\n        // Set GridLayout on Panel\r\n        panel.setLayout(new GridLayout(50,1));\r\n\r\n        add(scrl); // Add JScrollPane in JFrame\r\n        \r\n        setTitle(\"JScrollPane\");\r\n        setSize(300,500);\r\n        setVisible(true);\r\n    }\r\n\r\n    public static void main(String args[])\r\n    {\r\n        new p6();\r\n    }\r\n}\r\n"
+  ], 
+  "descOut": [
+    "Following image is given in Question.", 
+    "", 
+    ""
+  ], 
+  "description": [
+    "", 
+    "", 
+    ""
+  ], 
+  "image": [
+    0, 
+    0, 
+    0
+  ], 
+  "title": [
+    "\r\nWrite a program code to generate the following output. \r\n", 
+    "Write a program to develop a frame to select the different states of India using JComboBox.", 
+    "Develop a program to demonstrate the use of ScrollPane in Swings."
+  ], 
+  "topicId": [
+    6, 
+    6, 
+    6
+  ]
+}
+}
