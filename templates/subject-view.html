@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Codebase Manager</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='/boost.css')}}">
+</head>
+<body>
+<center class='mt-5'><h1>Codebase Manager<h1></center><hr>
+{% if edit != None %}
+<div class="container">
+  <form action="/subject" method="post">
+    <input type="text" class="form-control mb-3" name="title" value="{{edit['title']}}" placeholder="Title" class="form-control">
+    <input type="text" class="form-control mb-3" name="description" value="{{edit['description']}}"  placeholder="Description" class="form-control">
+    <input type="hidden" value="{{edit['index']}}" name="index">
+    <input type="hidden" value="edited" name="function">
+    <input type="submit" class="btn btn-primary" value="Update">
+</div>
+  {% else %}
+  <form action="/subject" method="post">
+      <input type="text" class="form-control mb-3" name="title" placeholder="Title" class="form-control mb-3">
+      <input type="text" class="form-control mb-3" name="description" placeholder="Description" class="form-control mb-3">
+      <input type="submit" class="btn btn-primary" value="Add Subject">
+  </form>
+  {% endif %}<hr>
+  
+<table>
+  <thead>
+    <td>Title</td>
+    <td>Description</td>
+    <td>Edit</td>
+  </thead>
+  <tbody>
+
+    {% for i in range(length) %}
+    <tr>
+    <td>{{rows['title'][i]}}</td>
+    <td>{{rows['description'][i]}}</td>
+    <td>
+    <form action="/subject" method="post">
+      <input type="hidden" value="{{rows['title'][i]}}" name="title">
+      <input type="hidden" value="{{rows['description'][i]}}" name="description">
+      <input type="hidden" value="{{i}}" name="index">
+      <input type="hidden" value="edit" name="function">
+      <input type="submit" class="btn btn-primary" value="Edit">
+    </form>
+    </td>
+  </tr>  
+  {% endfor %}
+  <tbody>
+</table>
+
+</body>
+<html>

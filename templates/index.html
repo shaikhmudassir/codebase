@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Codebase Manager</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='/boost.css')}}">
+    
+</head>
+
+<body>
+<center class='mt-5'><h1>Codebase Manager<h1></center><hr>
+
+<div class="container mt-3">
+  <div class="row">
+    <form action="/subject" method="POST" class="col m-3">
+    <input type="submit" value="Subject" name="subject" class="btn btn-primary btn-lg">
+    </form>
+    <form action="/topic" method="POST" class="col m-3">
+        <input type="submit" value="Topic" name="topic" class="btn btn-primary btn-lg">
+    </form>
+    <form action="/post" method="GET" class="col m-3">
+        <input type="submit" value="Post" name="post" class="btn btn-primary btn-lg">
+    </form>
+  </div>
+</div><hr>
+
+</body>
+<html>

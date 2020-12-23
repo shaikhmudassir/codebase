@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>Codebase Manager</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='/boost.css')}}">
+</head>
+<body>
+<center class='mt-5'><h1>Codebase Manager<h1></center><hr>
+
+{% if edit != None %}
+  <form action="/topic" method="post">
+    <input type="text" class="form-control mb-3" name="Id" value="{{edit['Id']}}">
+    <input type="text" class="form-control mb-3" name="topic" value="{{edit['topic']}}" placeholder="Topic">
+    <select name="subject" class="form-control mb-3">
+    <option selected="true" disabled="true">Select subject . . . </option>
+        {% for s in subjects %}
+        {{s}}
+            {% if s == edit['subject'] %}
+                <option selected="true">{{s}}</option>
+            {% else %}
+                <option>{{s}}</option>
+            {% endif %}
+        {% endfor %}
+    </select>
+    <input type="hidden" value="{{edit['index']}}" name="index">
+    <input type="hidden" value="edited" name="function">
+    <input type="submit" class="btn btn-primary" value="Update">
+  </form>
+  {% else %}
+  <form action="/topic" method="post">
+    <input type="text" class="form-control mb-3" name="Id" value="{{length+1}}">
+    <input type="text" class="form-control mb-3" name="topic" placeholder="Topic"> 
+    <select name="subject" class="form-control mb-3">
+    <option selected="true" disabled="true" >Select subject . . . </option>
+        {% for s in subjects %}
+        <option>{{s}}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" class="btn btn-primary" value="Add Topic">
+  </form>
+  {% endif %}<hr>
+
+<table>
+  <thead>
+    <td>ID</td>
+    <td>Topic</td>
+    <td>Subject</td>
+    <td>Edit</td>
+  </thead>
+  <tbody>
+  {% for i in range(length) %}
+  <tr>
+    <td>{{rows['Id'][i]}}</td>
+    <td>{{rows['topic'][i]}}</td>
+    <td>{{rows['subject'][i]}}</td>
+    <td>
+    <form action="/topic" method="post">
+      <input type="hidden" value="{{rows['Id'][i]}}" name="Id">
+      <input type="hidden" value="{{rows['topic'][i]}}" name="topic">
+      <input type="hidden" value="{{rows['subject'][i]}}" name="subject">
+      <input type="hidden" value="{{i}}" name="index">
+      <input type="hidden" value="edit" name="function">
+      <input type="submit" class="btn btn-primary" value="Edit">
+    </form>
+    </td>
+  </tr>  
+  {% endfor %}
+  <tbody>
+</table>
+</body>
+<html>
