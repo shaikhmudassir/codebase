@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>Codebase Manager</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='/boost.css')}}">
+</head>
+<body>
+<center class='mt-5'><h1>Codebase Manager<h1></center><hr>
+
+{% if length != None %}
+  {% if edit != None %}
+  <form action="/post" method="post">
+    <input type="text" class="form-control mb-3" value="{{edit['Id']}}" name="Id">
+    <input type="text" class="form-control mb-3" value="{{edit['code']}}" name="code">
+    <input type="text" class="form-control mb-3" value="{{edit['descOut']}}" name="descOut">
+    <input type="text" class="form-control mb-3" value="{{edit['description']}}" name="description">
+    <input type="text" class="form-control mb-3" value="{{edit['image']}}" name="image">
+    <input type="text" class="form-control mb-3" value="{{edit['title']}}" name="title">
+    <select name="topicId" class="form-control mb-3">
+    <option selected="true" disabled="true">Select Topic IDs . . . </option>
+        {% for s in topicIds %}
+            {% if s == edit['topicId'] %}
+                <option selected="true">{{s}}</option>
+            {% else %}
+                <option>{{s}}</option>
+            {% endif %}
+        {% endfor %}
+    </select>
+    <input type="hidden" value="{{edit['index']}}" name="index">
+    <input type="hidden" value="edited" name="function">
+    <input type="submit" class="btn btn-primary" value="Update">
+  </form>
+  {% else %}
+  <form action="/post" method="post">
+    <input type="text" class="form-control mb-3" value="{{last_post + 1}}" name="Id">
+    <textarea type="text" class="form-control mb-3" placeholder="code" name="code"></textarea>
+    <input type="text" class="form-control mb-3" placeholder="descOut" name="descOut">
+    <textarea type="text" class="form-control mb-3" placeholder="description" name="description"></textarea>
+    <input type="text" class="form-control mb-3" placeholder="image" name="image">
+    <input type="text" class="form-control mb-3" placeholder="title" name="title">
+    <select name="topicId" class="form-control mb-3">
+    <option selected="true" disabled="true">Select Topic IDs . . . </option>
+        {% for s in topicIds %}
+        <option>{{s}}</option>
+        {% endfor %}
+    </select>
+    <input type="hidden" value="add" name="function">
+    <input type="submit" class="btn btn-primary" value="Add Post">
+  </form>
+  {% endif %}
+  {% endif %}<hr>
+
+<form action="/post" method="post">
+  <select name="topicId" class="form-control mb-3 no-block">
+    <option selected="true" disabled="true">Select Topic IDs . . . </option>
+      {% for s in topicIds %}
+        <option>{{s}}</option>
+      {% endfor %}
+    <input type="submit" class="btn btn-primary" value="Refresh">
+  </select>
+</form><hr>
+
+<table>
+  <thead>
+    <td>Id</td>
+    <td>Code</td>
+    <td>descOut</td>
+    <td>description</td>
+    <td>image</td>
+    <td>title</td>
+    <td>topicId</td>
+    <td>Edit</td>
+  </thead>
+  <tbody>
+
+    {% if length != None %}
+    {% for i in range(length) %}
+    <tr>
+    <td>{{rows['Id'][i]}}</td>
+    <td>{{rows['code'][i]}}</td>
+    <td>{{rows['descOut'][i]}}</td>
+    <td>{{rows['description'][i]}}</td>
+    <td>{{rows['image'][i]}}</td>
+    <td>{{rows['title'][i]}}</td>
+    <td>{{rows['topicId'][i]}}</td>
+    <td>
+    <form action="/post" method="post">
+      <input type="hidden" value="{{rows['Id'][i]}}" name="Id">
+      <input type="hidden" value="{{rows['code'][i]}}" name="code">
+      <input type="hidden" value="{{rows['descOut'][i]}}" name="descOut">
+      <input type="hidden" value="{{rows['description'][i]}}" name="description">
+      <input type="hidden" value="{{rows['image'][i]}}" name="image">
+      <input type="hidden" value="{{rows['title'][i]}}" name="title">
+      <input type="hidden" value="{{rows['topicId'][i]}}" name="topicId">
+      <input type="hidden" value="{{i}}" name="index">
+      <input type="hidden" value="edit" name="function">
+      <input type="submit" class="btn btn-primary" value="Edit">
+    </form>
+    </td>
+  </tr>  
+  {% endfor %}
+  {% endif %}
+  <tbody>
+</table>
+  
+
+</body>
+<html>
