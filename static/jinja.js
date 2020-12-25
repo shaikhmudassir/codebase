@@ -116,7 +116,8 @@ function post(Id)
         imageTag = ""
         if (data[Id]['image'][i] == '0')
         {
-          imageTag = "<img src='img/"+ data[Id]['Id'][i] +".PNG' >";
+          img-url = "https://mudazzir.gitlab.io/codebase-img/"
+          imageTag = "<img src='" + img-url + data[Id]['Id'][i] +".PNG' >";
         }
         document.getElementById('flask-post').innerHTML = hold + 
         "<div id='"+ data[Id]['Id'][i] +"'>\n"+
