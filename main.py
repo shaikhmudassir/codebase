@@ -46,11 +46,6 @@ def subject():
             select['description'].append(description)
             update_subject(select)
 
-        jsonObject = json.dumps(select, indent = 2) 
-        with open(f'{app.root_path}\database\\subject.json', 'w') as outfile: 
-            outfile.write(jsonObject)
-        return redirect('/subject')
-
     return render_template('subject-view.html', rows=select, length=length, edit=None)
 
 @app.route('/topic', methods = ['get', 'post'])
@@ -92,11 +87,6 @@ def topic():
             select['topic'].append(topic)
             select['subject'].append(subject)
             update_topic(select)
-
-        jsonObject = json.dumps(select, indent = 2) 
-        with open(f'{app.root_path}\database\\topic.json', 'w') as outfile: 
-            outfile.write(jsonObject)
-        return redirect('/topic')
             
     return render_template('topic-view.html', rows=select, length=length, subjects=subjects, edit=None)
 
@@ -168,14 +158,19 @@ def update_subject(select):
     jsonObject = json.dumps(select, indent = 2) 
     with open(f'{app.root_path}\database\\subject.json', 'w') as outfile: 
         outfile.write(jsonObject)
+    return redirect('/subject')
+
 def update_topic(select):
     jsonObject = json.dumps(select, indent = 2) 
     with open(f'{app.root_path}\database\\topic.json', 'w') as outfile: 
         outfile.write(jsonObject)
+    return redirect('/topic')
+
 def update_post(select):
     jsonObject = json.dumps(select, indent = 2) 
     with open(f'{app.root_path}\database\\post.json', 'w') as outfile: 
         outfile.write(jsonObject)
+    return redirect('/post')
         
 
 if __name__ == '__main__':
